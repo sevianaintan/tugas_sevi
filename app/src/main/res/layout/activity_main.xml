@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Data!"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:id="@+id/judul"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nama"
+        android:textSize="21sp"
+        android:hint="Nama Kampus"
+        android:layout_below="@id/judul"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_alamat"
+        android:hint="Alamat Kampus"
+        android:textSize="21sp"
+        android:layout_below="@id/et_nama"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_mhs"
+        android:layout_below="@id/et_alamat"
+        android:hint="Jumlah Mahasiswa"
+        android:textSize="21sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit"
+        android:text="Submit"
+        android:layout_alignParentBottom="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rc_main"
+        android:layout_margin="4dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_above="@id/btn_submit"
+        android:layout_below="@id/et_mhs">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
